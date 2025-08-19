@@ -1,0 +1,26 @@
+{
+  "name": "serverforlive",
+  "version": "1.0.0",
+  "description": "A Node.js backend server for AlgebraLand.  Handles user accounts, card collections, decks, and game data using a MySQL database.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Math-Tutor-In-Jeans/AlgebraLand.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Math-Tutor-In-Jeans/AlgebraLand/issues"
+  },
+  "homepage": "https://github.com/Math-Tutor-In-Jeans/AlgebraLand#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.3"
+  }
+}
