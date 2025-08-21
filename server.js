@@ -136,7 +136,13 @@ app.post('/checkUserName', async (req, res) => {
 
         res.json({ exists });
     } catch (error) {
+        // Enhanced error logging with unique marker and stack trace
+        console.error('===CHECKUSERNAME ERROR START===');
         console.error('Error checking userName:', error);
+        if (error && error.stack) {
+            console.error('Stack trace:', error.stack);
+        }
+        console.error('===CHECKUSERNAME ERROR END===');
         res.status(500).json({ error: 'Error checking userName', details: error.message });
     } finally {
         if (connection) {
