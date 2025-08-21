@@ -4,7 +4,10 @@ const { createConnection } = require('mysql2/promise');
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: ['https://www.mathtutorinjeans.net', 'http://localhost:3000'], // add any other allowed origins here
+    credentials: true // if you use cookies or authentication
+}));
 app.get('/ping', (req, res) => {
     res.status(200).json({ message: 'pong' });
 });
