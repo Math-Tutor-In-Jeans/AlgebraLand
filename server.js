@@ -8,11 +8,10 @@ app.use(cors());
 app.get('/ping', (req, res) => {
     res.status(200).json({ message: 'pong' });
 });
-
 async function initializeConnection() {
     try {
         const connection = await createConnection({
-            host: 'localhost',
+            host: process.env.DB_HOST || 'cloud.beaconbay.com',
             user: 'coinzone_MTIJ',
             password: 'AlpineBoredom16',
             database: 'coinzone_mydb'
